@@ -1,0 +1,9 @@
+/*    /index.html   200
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
