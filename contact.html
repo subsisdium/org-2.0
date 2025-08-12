@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | subsisdium</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="./src/main.js" type="module"></script>
+</head>
+<body class="bg-dark text-white font-inter">
+  <!-- Header -->
+  <header class="fixed w-full bg-dark/95 backdrop-blur-sm py-3 px-4 md:px-8 lg:px-12 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="logo">
+        <a href="index.html" class="flex items-center">
+          <img src="./public/Bildschirmfoto_2025-07-02_um_14.56.04-removebg-preview.png" alt="subsisdium" class="h-16 md:h-32">
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8 items-center h-full">
+        <a href="services.html" class="text-gray-300 hover:text-white transition-colors">Leistungen</a>
+        <a href="contact.html" class="text-blue hover:text-white transition-colors">Kontakt</a>
+        <a href="#book-demo" class="btn-secondary">
+          Jetzt Beratungsgespräch buchen
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6" data-aos="fade-up">
+      <div class="container mx-auto max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+          <span class="text-blue">Beratungsgespräch</span> buchen
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl text-center leading-relaxed mb-12">
+          Bereit für ein unverbindliches Beratungsgespräch? Lassen Sie uns herausfinden, 
+          wie wir Ihrem Unternehmen helfen können.
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book-demo" class="py-16 bg-dark/50" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <!-- Booking Form with Grid Layout -->
+          <div class="bg-dark/50 p-8 rounded-xl border border-blue/20 transform hover:scale-[1.02] hover:shadow-2xl hover:border-blue/40 transition-all duration-500 hover:bg-dark/60">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold mb-3 text-white">Termin vereinbaren</h2>
+              <div class="w-20 h-1 bg-gradient-to-r from-blue to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <form id="booking-form">
+              <div class="space-y-8">
+                <!-- Personal Info -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">
+                      Vorname *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="firstName" 
+                      name="firstName" 
+                      required
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                      placeholder="Ihr Vorname"
+                    >
+                  </div>
+                  <div>
+                    <label for="lastName" class="block text-sm font-medium text-white-300 mb-2">
+                      Nachname *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="lastName" 
+                      name="lastName" 
+                      required
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-gray placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                      placeholder="Ihr Nachname"
+                    >
+                  </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                    E-Mail *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                    placeholder="name@unternehmen.de"
+                  >
+                </div>
+
+                <!-- Phone and Company -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+                      Telefonnummer *
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      required
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                      placeholder="+49 123 456789"
+                    >
+                  </div>
+                  <div>
+                    <label for="company" class="block text-sm font-medium text-gray-300 mb-2">
+                      Unternehmen *
+                    </label>
+                    <input 
+                      type="text" 
+                      id="company" 
+                      name="company"
+                      required
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                      placeholder="Ihr Unternehmen GmbH"
+                    >
+                  </div>
+                </div>
+
+                <!-- Website -->
+                <div>
+                  <label for="website" class="block text-sm font-medium text-gray-300 mb-2">
+                    Website
+                  </label>
+                  <input 
+                    type="url" 
+                    id="website" 
+                    name="website"
+                    class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                    placeholder="https://ihre-website.de"
+                  >
+                </div>
+
+                <!-- Date and Time Preference -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="preferredDate" class="block text-sm font-medium text-gray-300 mb-2">
+                      Wunschtermin
+                    </label>
+                    <input 
+                      type="datetime-local" 
+                      id="preferredDate" 
+                      name="preferredDate"
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                      min=""
+                    >
+                  </div>
+                  <div>
+                    <label for="timePreference" class="block text-sm font-medium text-gray-300 mb-2">
+                      Bevorzugte Uhrzeit
+                    </label>
+                    <select 
+                      id="timePreference" 
+                      name="timePreference"
+                      class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300"
+                    >
+                      <option value="">Bitte wählen</option>
+                      <option value="morning">Vormittags (9:00 - 12:00)</option>
+                      <option value="afternoon">Nachmittags (12:00 - 17:00)</option>
+                      <option value="evening">Abends (17:00 - 20:00)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+                    Ihre Herausforderung
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4"
+                    class="w-full px-4 py-3 bg-dark transparent border-2 border-blue rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-blue transition-all duration-300 resize-none"
+                    placeholder="Beschreiben Sie kurz Ihre aktuelle Situation und was Sie erreichen möchten..."
+                  ></textarea>
+                </div>
+
+                <!-- Lead Source -->
+                <div>
+                  <label for="leadSource" class="block text-sm font-medium text-gray-300 mb-2">
+                    Wie haben Sie von uns erfahren?
+                  </label>
+                  <select 
+                    id="leadSource" 
+                    name="leadSource"
+                    class="w-full px-4 py-3 bg-dark transparent border-2 border-white rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue/60 focus:border-white transition-all duration-300"
+                  >
+                    <option value="">Bitte wählen</option>
+                    <option value="google">Google Suche</option>
+                    <option value="social">Social Media</option>
+                    <option value="referral">Empfehlung</option>
+                    <option value="advertising">Werbung</option>
+                    <option value="other">Sonstiges</option>
+                  </select>
+                </div>
+
+                <!-- Privacy Checkbox -->
+                <div class="flex items-start space-x-3 p-4 bg-gray-900/30 rounded-xl border border-gray-700/30">
+                  <input 
+                    type="checkbox" 
+                    id="privacy" 
+                    name="privacy" 
+                    required
+                    class="mt-1 w-5 h-5 text-blue bg-gray-900/50 border-blue-600/50 rounded-lg focus:ring-blue focus:ring-2 transition-all duration-300"
+                  >
+                  <label for="privacy" class="text-sm text-gray-300 leading-relaxed">
+                    Ich stimme der Verarbeitung meiner Daten gemäß der 
+                    <a href="#" class="text-blue hover:text-blue/80 underline transition-colors">Datenschutzerklärung</a> zu. *
+                  </label>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="pt-32">
+                  <button 
+                    type="submit" 
+                    class="btn-primary w-full"
+                  >
+                    Beratungsgespräch buchen
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark/80 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <a href="index.html" class="flex items-center">
+            <img src="./public/Bildschirmfoto_2025-07-02_um_14.56.04-removebg-preview.png" alt="subsisdium" class="h-24 md:h-32">
+          </a>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html" class="text-gray-400 hover:text-white">Leistungen</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Rechtliches</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Datenschutz</a></li>
+            <li><a href="agb.html" class="text-gray-400 hover:text-white">AGB</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Kontakt</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400">biruk.subsisdium@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

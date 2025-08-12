@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark: #0D0D0D;
+    --color-blue: #6D28D9;
+    --color-blue-dark: #5B21B6;
+    --color-white: #FFFFFF;
+    --color-gray-300: #D1D5DB;
+    --color-gray-400: #9CA3AF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+  }
+
+  body {
+    @apply bg-dark text-white font-inter antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-4 text-lg font-semibold text-white bg-blue rounded-full 
+    transition-all duration-300 transform hover:bg-blue-dark hover:scale-105 
+    focus:outline-none focus:ring-2 focus:ring-blue focus:ring-opacity-50 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-6 py-3 text-sm md:text-base font-semibold text-white bg-blue rounded-full 
+    transition-all duration-300 hover:bg-blue-dark focus:outline-none focus:ring-2 
+    focus:ring-blue focus:ring-opacity-50 shadow-md;
+  }
+
+  .highlight-text {
+    @apply relative inline-block;
+    text-shadow: 0 0 20px rgba(109, 40, 217, 0.5);
+  }
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.bg-blue-dark {
+  background-color: var(--color-blue-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.logo a {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+/* Pulse animation for the main CTA */
+#main-cta {
+  position: relative;
+}
+
+#main-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(109, 40, 217, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(109, 40, 217, 0);
+  }
+}
+
+/* Enhanced form styles */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.8);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(1) brightness(1.2);
+  background-color: rgba(109, 40, 217, 0.1);
+}
+
+select option {
+  background-color: #111827;
+  color: white;
+  padding: 8px;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"]:checked {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e");
+}
+
+input[type="checkbox"]:hover {
+  border-color: var(--color-blue);
+  background-color: rgba(109, 40, 217, 0.1);
+}
+
+/* Form field focus glow effect */
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.2), 0 0 20px rgba(109, 40, 217, 0.1);
+}
+
+/* Smooth placeholder animation */
+input::placeholder, textarea::placeholder {
+  transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  opacity: 0.7;
+}
+
+/* Gradient border animation */
+.form-gradient-border {
+  background: linear-gradient(45deg, transparent, rgba(109, 40, 217, 0.1), transparent);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
